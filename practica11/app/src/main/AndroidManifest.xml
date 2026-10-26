@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!--
+        Permisos de almacenamiento (Consigna de la Práctica 11).
+
+        - WRITE_EXTERNAL_STORAGE: necesario hasta Android 9 (API 28) para escribir
+          en el almacenamiento externo compartido.
+        - READ_EXTERNAL_STORAGE: necesario hasta Android 12L (API 32) para leerlo.
+        - READ_MEDIA_AUDIO: a partir de Android 13 (API 33) reemplaza al anterior
+          para archivos multimedia.
+
+        En Android 10+ (Scoped Storage) el sistema restringe el acceso directo a
+        rutas, por lo que la app también trabaja con el almacenamiento externo
+        propio (getExternalFilesDir) y con el Storage Access Framework.
+    -->
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="28" />
+    <uses-permission
+        android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32" />
+    <uses-permission android:name="android.permission.READ_MEDIA_AUDIO" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Practica11">
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.Practica11"
+            android:windowSoftInputMode="adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
