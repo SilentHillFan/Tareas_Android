@@ -1,0 +1,25 @@
+# --- Android / Gradle build artifacts ---
+.gradle/
+build/
+.cxx/
+.externalNativeBuild/
+captures/
+*.apk
+*.aab
+*.ap_
+*.dex
+
+# --- IDE / editor files ---
+.idea/
+*.iml
+*.ipr
+*.iws
+.kotlin/
+.vscode/
+.DS_Store
+
+# --- Local config (machine-specific paths) ---
+local.properties
+
+# --- Not part of the repo (kept local) ---
+hello-world/
