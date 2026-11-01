@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Rutas que FileProvider puede compartir con la app de cámara.
+    files-path apunta a Context.getFilesDir(): aquí vive la carpeta
+    "fotos/" donde se guardan las imágenes de las publicaciones.
+-->
+<paths>
+    <files-path
+        name="fotos"
+        path="fotos/" />
+</paths>
